@@ -32,11 +32,7 @@ class PurePursuit():
 		'''
 		self.waypts = waypts
 		self.num_waypts = waypts.shape[0]
-<<<<<<< HEAD
 		self.lookahead = 4
-=======
-		self.lookahead = 1.5
->>>>>>> origin/master
 
 		self.waypt_number = 0
 		self.current_waypt_location = 0
@@ -57,11 +53,7 @@ class PurePursuit():
 
 		self.dt = 0.050
 
-<<<<<<< HEAD
 		self.vel = 0.3
-=======
-		self.vel = 0.75
->>>>>>> origin/master
 		self.vel_left = 0
 		self.vel_right = 0
 		self.target_vel = self.vel
@@ -138,11 +130,7 @@ class PurePursuit():
 			self.waypts_curvature.append(curvature)
 
 		self.waypts_curvature.append(0)
-<<<<<<< HEAD
 		# print(self.waypts_curvature)
-=======
-		print(self.waypts_curvature)
->>>>>>> origin/master
 
 	def update_pos(self, x, y, theta):
 		self.x_pos = x
@@ -278,13 +266,8 @@ class PurePursuit():
 		vel_decay = np.absolute(narrowed_curvature)
 		vel_decay = 0.5 + (1 - vel_decay) * 0.5
 		# print("vel_decay", vel_decay)
-<<<<<<< HEAD
 		# print("current_waypt_location", self.current_waypt_location)
 		# print("index", self.waypt_number)
-=======
-		print("current_waypt_location", self.current_waypt_location)
-		print("index", self.waypt_number)
->>>>>>> origin/master
 
 		self.ang_vel = self.target_vel * self.curvature * vel_decay
 
